@@ -10,3 +10,4 @@ loginBtn.addEventListener('click', () => {
     container.classList.remove("active");
 });
 
+/* o código está lidando com a modificação da classe "active" no elemento container com base nos eventos de clique nos botões de registro (registerBtn) e login (loginBtn). Quando o botão de registro é clicado, a classe "active" é adicionada, e quando o botão de login é clicado, a classe "active" é removida. O que faz com que alterne entre diferentes estados ou painéis em uma interface de usuário*/

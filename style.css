@@ -1,5 +1,7 @@
+/* Importa a fonte Montserrat do Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
 
+/* Define estilos padrão para o documento, ou reset */
 *{
     margin: 0;
     padding: 0;
@@ -7,6 +9,7 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+/* Estilos gerais para o corpo do documento */
 body{
     background-color: #c9d6ff;
     background: linear-gradient(to right, #e2e2e2, #c9d6ff);
@@ -17,6 +20,7 @@ body{
     height: 100vh;
 }
 
+/* Estilos do container principal do formulário (parte branca) */
 .container{
     background-color: #fff;
     border-radius: 30px;
@@ -28,6 +32,7 @@ body{
     min-height: 480px;
 }
 
+/* Estilos para elementos de texto dentro do container */
 .container p{
     font-size: 14px;
     line-height: 20px;
@@ -35,10 +40,53 @@ body{
     margin: 20px 0;
 }
 
+/* Importa a fonte Montserrat do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+/* Define estilos padrão para o documento */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Estilos gerais para o corpo do documento */
+body {
+    background-color: #c9d6ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* Estilos do container principal do formulário */
+.container {
+    background-color: #fff;
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    position: relative;
+    overflow: hidden;
+    width: 768px;
+    max-width: 100%;
+    min-height: 480px;
+}
+
+/* Estilos para elementos de texto dentro do container */
+.container p {
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.3px;
+    margin: 20px 0;
+}
+
+/* Estilos para pequenos textos dentro do container */
 .container span{
     font-size: 12px;
 }
 
+/* Estilos para links dentro do container */
 .container a{
     color: #333;
     font-size: 13px;
@@ -46,6 +94,7 @@ body{
     margin: 15px 0 10px;
 }
 
+/* Estilos para botões dentro do container */
 .container button{
     background-color: #0a22cb;
     color: #fff;
@@ -60,11 +109,13 @@ body{
     cursor: pointer;
 }
 
+/* Estilos para botões com a classe 'hidden' dentro do container */
 .container button.hidden{
     background-color: transparent;
     border-color: #fff;
 }
 
+/* Estilos para o formulário dentro do container */
 .container form{
     background-color: #fff;
     display: flex;
@@ -75,6 +126,7 @@ body{
     height: 100%;
 }
 
+/* Estilos para campos de entrada (input) dentro do formulário */
 .container input{
     background-color: #eee;
     border: none;
@@ -86,6 +138,7 @@ body{
     outline: none;
 }
 
+/* Estilos para a transição do formulário (sign-in e sign-up) */
 .form-container{
     position: absolute;
     top: 0;
@@ -93,16 +146,20 @@ body{
     transition: all 0.6s ease-in-out;
 }
 
+
+/* Estilos para a área de login */
 .sign-in{
     left: 0;
     width: 50%;
     z-index: 2;
 }
 
+/* Ativa a transição para ocultar a área de login quando o container está ativo */
 .container.active .sign-in{
     transform: translateX(100%);
 }
 
+/* Estilos para a área de cadastro */
 .sign-up{
     left: 0;
     width: 50%;
@@ -110,6 +167,7 @@ body{
     z-index: 1;
 }
 
+/* Ativa a transição para mostrar a área de cadastro quando o container está ativo */
 .container.active .sign-up{
     transform: translateX(100%);
     opacity: 1;
@@ -117,6 +175,7 @@ body{
     animation: move 0.6s;
 }
 
+/* Animação keyframe para transição entre login e cadastro */
 @keyframes move{
     0%, 49.99%{
         opacity: 0;
@@ -128,10 +187,12 @@ body{
     }
 }
 
+/* Estilos para ícones sociais */
 .social-icones{
     margin: 20px 0;
 }
 
+/* Estilos para links de ícones sociais */
 .social-icones a{
     border: 1px solid #ccc;
     border-radius: 20%;
@@ -143,6 +204,7 @@ body{
     height: 40px;
 }
 
+/* Estilos para o container do toggle (botão de alternar entre login e cadastro) */
 .toggle-container{
     position: absolute;
     top: 0;
@@ -155,11 +217,13 @@ body{
     z-index: 1000;
 }
 
+/* Ativa a transição para mover o toggle quando o container está ativo */
 .container.active .toggle-container{
     transform: translateX(-100%);
     border-radius: 0 150px 100px 0;
 }
 
+/* Estilos para o botão de toggle (alternar entre login e cadastro) */
 .toggle{
     background-color:#e06c08;
     height: 100%;
@@ -173,10 +237,12 @@ body{
     transition: all 0.6s ease-in-out;
 }
 
+/* Estilos para o botão de toggle (alternar entre login e cadastro) */
 .container.active .toggle{
     transform: translateX(50%);
 }
 
+/* Estilos para o painel do toggle (área do formulário ativada pelo botão de toggle) */
 .toggle-panel{
     position: absolute;
     width: 50%;
@@ -192,19 +258,23 @@ body{
     transition: all 0.6s ease-in-out;
 }
 
+/* Estilos para a transição do painel à esquerda quando o toggle está ativo */
 .toggle-left{
     transform: translateX(-200%);
 }
 
+/* Ativa a transição para mostrar o painel à esquerda quando o container está ativo */
 .container.active .toggle-left{
     transform: translateX(0);
 }
 
+/* Estilos para o painel à direita quando o toggle está ativo */
 .toggle-right{
     right: 0;
     transform: translateX(0);
 }
 
+/* Ativa a transição para mostrar o painel à direita quando o container está ativo */
 .container.active .toggle-right{
     transform: translateX(200%);
 }
